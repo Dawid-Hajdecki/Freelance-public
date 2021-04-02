@@ -1,0 +1,294 @@
+/*
+********
+This Code was written By Dawid Hajdecki - instagram.com/dawidhajdecki
+********
+*/
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    width:100%;
+    height:auto;
+}
+h1, h2, h3, p{
+    margin: 0px;
+    padding: 0px;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+.scroll{
+    height: 45px;
+    width: 100%;
+    background: #aa5758;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: unset;
+}
+.scrollAnimation{
+    animation: hide 2s forwards;
+}
+.scroll p{
+    margin-left: 15px;
+}
+.logoAnimation{
+    animation: rotate 0.3s forwards;
+}
+.disabled{
+    pointer-events: none;
+}
+/* Header */
+header .logo{
+    position: fixed;
+    top:10px;
+    left:10px;
+    text-align: center;
+    width: 50px;
+    height:auto;
+    background: #e2e1e1;
+    padding: 5px;
+}
+header .logo img{
+    cursor: pointer;
+    animation: rotate3d 1.5s infinite linear;
+}
+header .logo p{
+    line-height: 15px;
+}
+header .mid p{
+    font-size: 20px;
+    letter-spacing: 1rem;
+}
+header .mid{
+    height: 94vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #cfcfd3;
+    z-index: 2;
+}
+header h1{
+    font-family: 'Aguafina Script', cursive;
+    font-size: 100px;
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(180deg);
+    }
+}
+@keyframes rotate3d{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(180deg);
+    }
+}
+/* Section */
+section{
+    background: #cfcfd3;
+}
+section h1{
+    padding: 20px 0 20px 150px;
+}
+section .row .banner{
+    width: 100%;
+    height: auto;
+    /*background: #8f8fd3;*/
+    margin-top: 20px;
+} 
+section .row, section .morePictures{
+    min-height:auto;
+    margin: 0 10vw 0 10vw;
+}
+section .row .img, section .morePictures .img{
+    height: 30%;
+    width: 30%;
+}
+section#section5 .container{
+    text-align: center;
+}
+section#section5 h1{
+    margin-right: 150px;
+}
+section#section5 .row{
+    margin: 0 20vw 0 20vw;
+    padding-bottom:100px;
+}
+section#section6{
+    width: 100vw;
+    height:100vh;
+    position: fixed;
+    top:0;
+    left:0;
+    background: rgb(0, 0, 0,0.8);
+    display:none;
+}
+section#section6 .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:white;
+    margin-top: 20px;
+}
+section#section6 img{
+    width: 35%;
+    height: auto;
+}
+section#section6 a{
+    position: absolute;
+    top:50%;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 5%;
+}
+section#section6 a:hover{
+    background: rgb(107, 107, 107);
+}
+section#section6 .next{
+    right:50px;
+}
+section#section6 .prev{
+    left:50px;
+}
+@keyframes hide{
+    from{
+        width: 100%;
+        background: #8d8e8e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    to{
+        background:rgb(141,142,142,0.2);
+        justify-content: left;
+    }
+}
+/* Contact */
+aside .contact{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    height: 80px;
+    width: 80px;
+    background: rgb(65,103,136);
+    border-radius: 45%;
+}
+aside .contact .click{
+    display:flex;
+    justify-content: center;
+    margin-top: 32%;
+}
+aside .contact h3{
+    font-size: 15px;
+}
+aside .contactShow{
+    animation: contactOut 0.5s linear forwards;
+}
+aside .contactHide{
+    animation: contactIn 0.5s linear forwards;
+}
+aside .content{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+aside .content .close{
+    position: absolute;
+    top:0px;
+    left:0px;
+    margin: 0 15px 15px 15px;
+    font-size: 30px;
+    cursor: pointer;
+}
+aside .content form{
+    display:inherit;
+    flex-direction: inherit;
+}
+aside .content textarea{
+    width: 200px;
+    height: 150px;
+}
+input[type=text], textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+input[type=submit]{
+    width: 100px;
+    height: 25px;
+    padding: 5px;
+    margin: 10px;
+    background: #aa5758;
+    border:0px;
+}
+@keyframes contactOut{
+    from{
+        height: 80px;
+        width: 80px;
+        border-radius: 45%;
+    }
+    to{
+        height: 500px;
+        width: 300px;
+        border-radius: 0%;
+        background: rgb(65,103,136,0.7);
+    }
+}
+@keyframes contactIn{
+    from{
+        height: 500px;
+        width: 300px;
+        border-radius: 0%;
+        background: rgb(65,103,136,0.7);
+    }
+    to{
+        height: 80px;
+        width: 80px;
+        border-radius: 45%;
+        background: rgb(65,103,136);
+    }
+}
+/* Media */
+@media (orientation:portrait) and (any-hover:none), (max-width:500px){
+    header h1{
+        font-size: 80px;
+    }
+    section .row{
+        margin: 0 10vw 0 10vw;
+    }
+    section#section5 .row{
+        margin: 0 5vw 0 5vw;
+        padding-bottom:100px;
+    }
+    header .mid{
+        height: 85vh;
+    }
+    section#section5 h1 {
+        margin-right: 120px;
+    }
+    section#section5 h1 {
+        padding: 20px 0 20px 120px;
+    }
+    section#section6 img{
+        width: 70%;
+        height: auto;
+    }
+}
+@media (max-width:950px){
+    section#section5 .row{
+        margin: 0 10vw 0 10vw;
+        padding-bottom:100px;
+    }
+}
